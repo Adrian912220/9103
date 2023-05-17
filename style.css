@@ -1,0 +1,73 @@
+button {
+    background-color: rgb(118, 235, 244); 
+    padding: 15px 32px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    border: 1px solid rgb(103, 64, 210);
+    font-family: Arial, sans-serif; 
+    font-size: 16px;
+  } 
+
+button:hover {
+    background-color: rgb(66, 57, 167);
+    color: white;
+    cursor: pointer;
+}
+  
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "title-grid title-grid title-grid title-grid"
+      "automation automation automation button-grid"
+      "automation automation automation button-grid"
+      "automation automation automation button-grid"
+      "automation automation automation button-grid"
+      "automation automation automation button-grid";
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title-grid title-grid title-grid title-grid"
+        "automation automation automation automation"
+        "automation automation automation automation"
+        "automation automation automation automation"
+        "button-grid button-grid button-grid button-grid"
+        "button-grid button-grid button-grid button-grid"; */
+}
+  
+.title-grid { 
+    grid-area: title-grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.automation {
+    grid-area: automation;
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid rgb(103, 64, 210);
+}
+
+.button-grid {
+    grid-area: button-grid;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
